@@ -1,11 +1,11 @@
 # Site settings
 author: Todd Stoneberg
-title: 
+title: New Beginnings
 header-img: img/home-bg.png
 email: todd.stoneberg@gmail.com
 copyright_name: Todd Stoneberg
 description: > # this means to ignore newlines until "baseurl:"
-  
+  Begin to Code
 baseurl: "" # the subpath of your site, e.g. /blog
 twitter_username: 
 github_username:  codeski
