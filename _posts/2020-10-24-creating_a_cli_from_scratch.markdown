@@ -1,7 +1,7 @@
 ---
 layout: post
-title:      "Creating a CLI from scratch"
-date:       2020-10-24 21:03:08 +0000
+title:      "Creating a CLI from scratch Ruby"
+date:       2020-10-24 17:03:09 -0400
 permalink:  creating_a_cli_from_scratch
 ---
 
