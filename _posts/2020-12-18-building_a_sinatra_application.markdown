@@ -7,7 +7,7 @@ permalink:  building_a_sinatra_application
 
 Sinatra has allowed me to create an application with a Domain Specific Language(DSL) using Models, Views, and Controllers(MVC). Basically, you can play with the application in the browser.
 ## What my app does
-#### The application is called the ***Hobby Gear Application*** 
+#### The application is called the ***Hobby Gear App*** 
 It's an app where users can log in/out, create, read, update and delete hobbies that will associate to the user and items that will belong to a specific hobby. All of these model objects will be stored in a database using Active Record.
 
 My 3 models: 
