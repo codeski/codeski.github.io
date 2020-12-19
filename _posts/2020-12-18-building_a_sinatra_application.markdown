@@ -1,7 +1,7 @@
 ---
 layout: post
-title:      "Building a Sinatra Application"
-date:       2020-12-19 01:13:29 +0000
+title:      "Sinatra Application Building & Protecting"
+date:       2020-12-18 20:13:29 -0500
 permalink:  building_a_sinatra_application
 ---
 
