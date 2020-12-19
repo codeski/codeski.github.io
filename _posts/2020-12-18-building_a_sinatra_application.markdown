@@ -61,4 +61,4 @@ if logged_in? && current_user == hobby.user
      or
 if logged_in? && current_user == item.hobby.user
 ```
-These high level relationships help compare instance against instance to make sure they are identical and have the permission to navigate to that View and/or Controller. All post, patch and delete requests are protected in the views and controllers to make sure we can't be hacked in the dev tools or through our routes. 
+These high level relationships allow us to make sure the User associated with the object and current_user are identical and have the permission to navigate to that View and/or Controller. All post, patch and delete requests must be protected in the views and controllers to make sure we can't be hacked in the dev tools or through our routes. 
