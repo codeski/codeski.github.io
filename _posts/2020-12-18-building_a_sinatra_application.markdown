@@ -20,20 +20,21 @@ class User < ActiveRecord::Base
 
     has_many :hobbies
     has_many :items, through: :hobbies
-end```
-```
+end
+
 class Hobby < ActiveRecord::Base
     validates :name, presence: true
     
     belongs_to :user
     has_many :items
-end```
-```
+end
+
 class Item < ActiveRecord::Base
     validates :name, presence: true
     
     belongs_to :hobby
-end```
+end
+```
 
 Our User passwords are encrypted with the `gem 'bcrypt'`, which allows us to call the method `has_secure_password`. In order for this to work the password needs to be saved as a `t.string :password_digest` in the users table.  With this gem no one will be able to view actual passwords that are saved to our database.
 
