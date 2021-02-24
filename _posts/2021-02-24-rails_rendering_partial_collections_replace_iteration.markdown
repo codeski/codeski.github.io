@@ -22,11 +22,11 @@ view/posts/_post.html.erb
 <p><%= post.content %></p>
 ```
 And now we modify our view/posts/index.html.erb to 
-```
-<%= render partial: ‘post’, collection: @posts %> 
+
+`<%= render partial: ‘post’, collection: @posts %>`
 Or (more abstractly)
-<%= render @posts’ %> 
-```
+`<%= render @posts’ %>` 
+
 We can do this because we followed the implicit formatting that rails accepts. But what if we don’t follow Rails convention when naming our partial and we put it under a different folder in our views.
 view/users/show.html.erb
 ```
@@ -44,7 +44,6 @@ view/posts/_different_naming.html.erb (not that we would ever call a partial thi
 
 Now our iteration can be replaced in 
 view/users/show.html.erb
-```
-<%= render partial: ‘posts/different_naming’, collection: @user.posts %>
-```
+
+`<%= render partial: ‘posts/different_naming’, collection: @user.posts %>`
 
