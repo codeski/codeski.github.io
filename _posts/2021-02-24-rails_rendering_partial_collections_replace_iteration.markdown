@@ -1,7 +1,7 @@
 ---
 layout: post
 title:      "Rails: rendering partial collections replace iteration"
-date:       2021-02-24 21:57:02 +0000
+date:       2021-02-24 16:57:02 -0500
 permalink:  rails_rendering_partial_collections_replace_iteration
 ---
 
@@ -23,7 +23,7 @@ view/posts/_post.html.erb
 `
 And now we modify our view/posts/index.html.erb to 
 `
-<%= render partial: ‘post’, collection: ‘@posts’ %> 
+<%= render partial: ‘post’, collection: @posts %> 
 Or (more abstractly)
 <%= render @posts’ %> 
 `
@@ -46,6 +46,6 @@ view/posts/_different_naming.html.erb (not that we would ever call a partial thi
 Now our iteration can be replaced in 
 view/users/show.html.erb
 `
-<%= render partial: ‘posts/different_naming’, collection: ‘@user.posts’ %>
+<%= render partial: ‘posts/different_naming’, collection: @user.posts %>
 `
 
