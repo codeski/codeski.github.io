@@ -32,7 +32,8 @@ Or (more abstractly)
 ```
 <%= render @posts’ %>
 ```
-We can do this because we followed the implicit formatting that rails accepts. But what if we don’t follow Rails convention when naming our partial and we put it under a different folder in our views.
+We can do this because we followed the implicit formatting that rails accepts. But what if we don’t follow Rails convention when naming our partial and we call on it from a different folder in our views.
+
 view/users/show.html.erb
 ```
 <% @user.posts.each do |post| %>
@@ -40,7 +41,7 @@ view/users/show.html.erb
      <p><%= post.content %></p>
 <% end %>
 ```
-view/posts/_different_naming.html.erb (not that we would ever call a partial this, but it helps to understand.)
+view/posts/_differentnaming.html.erb (not that we would ever call a partial this, but it helps to understand.)
 ```
 <h2><%= different_naming.title %></h2>
 <p><%= different_naming.content %></p>
