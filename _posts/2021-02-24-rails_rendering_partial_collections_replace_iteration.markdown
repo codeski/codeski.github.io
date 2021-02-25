@@ -30,7 +30,7 @@ view/posts/index.html.erb to
 ```
 Or (more abstractly)
 ```
-<%= render @posts’ %>
+<%= render @posts %>
 ```
 We can do this because we followed the implicit formatting that rails accepts. But what if we don’t follow Rails convention when naming our partial and we call on it from a different folder in our views.
 
