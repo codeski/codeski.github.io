@@ -41,7 +41,7 @@ view/users/show.html.erb
      <p><%= post.content %></p>
 <% end %>
 ```
-view/posts/_differentnaming.html.erb (not that we would ever call a partial this, but it helps to understand.)
+view/posts/_different_naming.html.erb (not that we would ever call a partial this, but it helps to understand.)
 ```
 <h2><%= different_naming.title %></h2>
 <p><%= different_naming.content %></p>
