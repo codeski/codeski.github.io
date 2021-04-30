@@ -9,7 +9,7 @@ permalink:  oojs_where_s_that_video
 Ever wish you could organize videos by category and have them all embedded on one page? Well my application does just that. Simply fill out the form, add the embed code, create or choose an existing category, press “submit” and walla. No need to wait for a page refresh. The Object Oriented JavaScript is able to send and receive information to and from our backend Rails API server based on how the user interacts with the web application through JavaScript object event listeners. 
 
 To make it easy to find your submit button using JS add an id to the HTML in your form 
-example:  `<input id= “submit” type=”submit”>Submit</input>`
+example:  `<input id= “submit” type=”submit” value="submit"></input>`
 Now in your index.js file assign a variable and add an event listener to that variable
 `const submit = document.getElementById(“submit”)
 submit.addEventListener(“click”, handleSubmit)`
