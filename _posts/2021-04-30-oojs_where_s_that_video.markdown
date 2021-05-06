@@ -17,9 +17,19 @@ submit.addEventListener(“click”, handleSubmit)`
 Now you’ll have to write a handleSumbit function which will take an argument of the event from our event listener. 
 `handleSubmit = (event) => event.preventDefault()` - this cancels the default event of a page refresh when a submit button is pressed. 
 
-We communicate with our Rails server through JS fetch()’s. The submission form sends a `POST` fetch request to our create route action in our Video and possibly Category controller(s) containing the form’s params.
+We communicate with our Rails API server through JS fetch()’s. The submission form sends a `POST` fetch request to our create route action in our Video and possibly Category controller(s) containing the form’s params.
 
 Through these fetch requests and sometimes regardless the application creates, updates or removes our JS objects in the DOM(document object model full CRUD functionality). JS objects allow us to provide our user with a seamless and dynamic experience. 
+
+Just to touch a little more in depth about a fetch() request. The simplest `fetch()` request takes one argument, the URL path to the resource we want.
+```
+fetch(‘http://localhost3000/videos’)
+.then(response => response.json())
+.then(data => (do something with JSON data))
+```
+
+The beginning part of the fetch returns something called a promise containing a response object, which is an HTTP response. We `.then()` turn that response object into JSON by using the `.json()` method. We `.then()` take the JSON (data) and turn it into OO JavaScript using our JavaScript classes and constructors, which in my case ends up being Video and Category Objects. (the category objects are recieved from a different URL /categories)
+
 
 It’s cool to know that I’ve hardly scratched the surface of functionality that can be created with JS. It’s simply up to one's imagination for what they want to create. 
 
