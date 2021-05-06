@@ -28,7 +28,7 @@ fetch(‘http://localhost3000/videos’)
 .then(data => (do something with JSON data))
 ```
 
-The beginning part of the fetch returns something called a promise containing a response object, which is an HTTP response. We `.then()` turn that response object into JSON by using the `.json()` method. We `.then()` take the JSON (data) and turn it into OO JavaScript using our JavaScript classes and constructors, which in my case ends up being Video and Category Objects. (the category objects are recieved from a different URL /categories)
+The beginning part of the fetch returns something called a promise containing a response object, which is an HTTP response. We `.then()` turn that response object into JSON by using the `.json()` method. We `.then()` take the JSON (data) and turn it into OO JavaScript using our JavaScript classes and constructors, which in my case ends up being Video and Category Objects. (the category objects are recieved from /categories)
 
 
 It’s cool to know that I’ve hardly scratched the surface of functionality that can be created with JS. It’s simply up to one's imagination for what they want to create. 
