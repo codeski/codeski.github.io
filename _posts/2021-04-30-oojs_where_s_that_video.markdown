@@ -21,15 +21,17 @@ We communicate with our Rails API server through JS fetch()’s. The submission 
 
 Through these fetch requests and sometimes regardless the application creates, updates or removes our JS objects in the DOM(document object model full CRUD functionality). JS objects allow us to provide our user with a seamless and dynamic experience. 
 
-Just to touch a little more in depth about a fetch() request. The simplest `fetch()` request takes one argument, the URL path to the resource we want.
-```
+The fetch is a complicated subject to explain. The simplest `fetch()` request takes one argument, the URL path to the resource desired.
+
 fetch(‘http://localhost3000/videos’)
 .then(response => response.json())
 .then(data => (do something with JSON data))
-```
 
-The beginning part of the fetch returns something called a promise containing a response object, which is an HTTP response. We `.then()` turn that response object into JSON by using the `.json()` method. We `.then()` take the JSON (data) and turn it into OO JavaScript using our JavaScript classes and constructors, which in my case ends up being Video and Category Objects. (the category objects are recieved from /categories)
+The `fetch()` is an asynchronous function that returns something called a promise object. The promise can be pending but will ultimately be resolved or rejected. To provide order to the asynchronous fetch() function we use a `.then()`. A `.then()` waits for the promise to be resolved or rejected and will return another promise object, so they can be chained. 
 
+In our example, the `fetch()` promise object is a  HTTP response object. We `.then()` take that HTTP response object and turn that into a promise object that is a JSON object by using the `.json()` method. We `.then()` take the JSON object (data) and turn it into OO JavaScript using our JavaScript classes and constructors, which in my case ends up being Video and Category Objects. 
+
+While i didn’t, we could use a `.catch()` at the very end. If a promise is rejected then the a .catch() can be chained at the end to display some sort of error message. 
 
 It’s cool to know that I’ve hardly scratched the surface of functionality that can be created with JS. It’s simply up to one's imagination for what they want to create. 
 
