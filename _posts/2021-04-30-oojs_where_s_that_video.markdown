@@ -29,7 +29,7 @@ fetch(‘http://localhost3000/videos’)
 ```
 The `fetch()` is an asynchronous function that returns something called a promise object. The promise can be pending but will ultimately be resolved or rejected. To provide order to the asynchronous fetch() function we use a `.then()`. A `.then()` waits for the promise to be resolved or rejected and will return another promise object, so they can be chained. 
 
-In our example, the `fetch()` promise object is a  HTTP response object. We `.then()` take that HTTP response object and turn that into a promise object that is a JSON object by using the `.json()` method. We `.then()` take the JSON object (data) and turn it into OO JavaScript using our JavaScript classes and constructors, which in my case ends up being Video and Category Objects. 
+In our example, the `fetch()` promise object is a  HTTP response object. We `.then()` take that HTTP response object and turn that into a promise object that is a JSON object by using the `.json()` method. We `.then()` take the JSON object (data) and turn it into OO JavaScript using our JavaScript classes and constructors, which in my case ends up being video and category objects. 
 
 While I didn’t, one could use a `.catch()` at the very end. A `.catch()`  deals with rejected promises objects only and could be used to display an error message. 
 
