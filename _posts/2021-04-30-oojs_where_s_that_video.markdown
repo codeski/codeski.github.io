@@ -21,7 +21,7 @@ We communicate with our Rails API server through JS fetch()’s. The submission 
 
 Through these fetch requests and sometimes regardless the application creates, updates or removes our JS objects in the DOM(document object model full CRUD functionality). JS objects allow us to provide our user with a seamless and dynamic experience. 
 
-The fetch is a complicated subject to explain. The simplest `fetch()` request takes one argument, the URL path to the resource desired.
+The `fetch()` is a complicated subject to explain. The simplest `fetch()` request takes one argument, the URL path to the resource desired.
 ```
 fetch(‘http://localhost3000/videos’)
 .then(response => response.json())
