@@ -21,15 +21,15 @@ We then communicate with our Rails API server through the JS `fetch()` method. I
 
 Through these fetch requests and sometimes regardless the application creates, updates or removes our JS objects in the DOM. This full CRUD functionality without any page refreshes provides our users with a seamless and dynamic experience. 
 
-The `fetch()` method is a complicated subject to explain. The simplest `fetch()` method request to recieve data takes one argument, the URL path to the resource desired.
+The `fetch()` method is a complicated subject to explain. The simplest `fetch()` request takes one argument, the URL path to the resource desired.
 ```
 fetch(‘http://localhost3000/videos’)
 .then(response => response.json())
 .then(data => (do something with JSON data))
 ```
-The `fetch()` is an asynchronous function that returns something called a promise object. The promise can be pending but will ultimately be resolved or rejected. To provide order to the asynchronous `fetch()` function we use a `.then()`. A `.then()` waits for the promise to be resolved or rejected and will return another promise object, so they can be chained. 
+The `fetch()` is an asynchronous function that returns something called a promise object. The promise can be pending but will ultimately be resolved or rejected. We attach callbacks to the promise object with a `.then()`. A `.then()` waits for the promise to be resolved or rejected and will return another promise object that is the value of the callback, so they can be chained. 
 
-In our example, the `fetch()` promise object is a  HTTP response object. We `.then()` take that HTTP response object and turn that into a promise object that is a JSON object by using the `.json()` method. We `.then()` take the JSON object (data) and turn it into OO JavaScript using our JavaScript classes and constructors, which in my case ends up being video and category objects. 
+In our example, the `fetch()` promise object is a  HTTP response object. We `.then()` take that HTTP response object and extract the JSON data by using the `.json()` method. We `.then()` take the JSON object (data) and use it to make JS objects. 
 
 While I didn’t, one could use a `.catch()` at the very end. A `.catch()`  deals with rejected promises objects only and could be used to display an error message. 
 
