@@ -17,17 +17,17 @@ submit.addEventListener(“click”, handleSubmit)`
 Now you’ll have to write a handleSumbit function which will take an argument of the event from our event listener. 
 `handleSubmit = (event) => event.preventDefault()` - this cancels the default event of a page refresh when a submit button is pressed. 
 
-We then communicate with our Rails API server through the JS `fetch()` method. Inside the handleSubmit function we send a `POST` fetch request to our create action in our Video and possibly Category controller(s) containing the form’s params.
+We then communicate with our Rails API server through the JS `fetch()` method. Inside the handleSubmit function we send a `POST` fetch request to our create action in our Video controller, and possibly Category controller if they write in a new category instead of selecting from the dropdown, containing the form’s params.
 
 Through these fetch requests and sometimes regardless the application creates, updates or removes our JS objects in the DOM. This full CRUD functionality without any page refreshes provides our users with a seamless and dynamic experience. 
 
-The `fetch()` method is a complicated subject to explain. The simplest `fetch()` request (like the one sent to collect all videos and categories from our index controller actions) takes one argument, the URL path to the resource desired.
+The `fetch()` method is a complicated subject to explain. The 'GET'  request `fetch()` to collect all videos and categories from our index controller actions takes one argument, the URL path to the resource desired.
 ```
 fetch(‘http://localhost3000/videos’)
 .then(response => response.json())
 .then(data => (do something with JSON data))
 ```
-The `fetch()` is an asynchronous function that returns something called a promise object. The promise can be pending but will ultimately be resolved or rejected. We attach callbacks to the promise object with a `.then()`. A `.then()` waits for the promise to be resolved or rejected and will return another promise object that is the value of the callback, so they can be chained. 
+The `fetch()` is an asynchronous function that returns something called a promise object. The promise can be pending but will ultimately be resolved or rejected. We attach callbacks to the promise object with a `.then()`. A `.then()` waits for the promise to be resolved or rejected and will return another promise object that will be the value of the callback, so they can be chained. 
 
 In our example, the `fetch()` promise object is a  HTTP response object. We `.then()` take that HTTP response object and extract the JSON data by using the `.json()` method. We `.then()` take the JSON object (data) and use it to make JS objects. 
 
