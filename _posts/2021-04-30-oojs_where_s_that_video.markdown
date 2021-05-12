@@ -21,7 +21,7 @@ We then communicate with our Rails API server through the JS `fetch()` method. I
 
 Through these fetch requests and sometimes regardless the application creates, updates or removes our JS objects in the DOM. This full CRUD functionality without any page refreshes provides our users with a seamless and dynamic experience. 
 
-The `fetch()` method is a complicated subject to explain. The simplest `fetch()` request, like the one sent to collect all videos and categories from our index controller action, takes one argument, the URL path to the resource desired.
+The `fetch()` method is a complicated subject to explain. The simplest `fetch()` request (like the one sent to collect all videos and categories from our index controller actions) takes one argument, the URL path to the resource desired.
 ```
 fetch(‘http://localhost3000/videos’)
 .then(response => response.json())
