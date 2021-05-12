@@ -17,11 +17,11 @@ submit.addEventListener(“click”, handleSubmit)`
 Now you’ll have to write a handleSumbit function which will take an argument of the event from our event listener. 
 `handleSubmit = (event) => event.preventDefault()` - this cancels the default event of a page refresh when a submit button is pressed. 
 
-We then communicate with our Rails API server through the JS `fetch()` method. Inside the handleSubmit function we send a `POST` fetch request to our create route action in our Video and possibly Category controller(s) containing the form’s params.
+We then communicate with our Rails API server through the JS `fetch()` method. Inside the handleSubmit function we send a `POST` fetch request to our create action in our Video and possibly Category controller(s) containing the form’s params.
 
 Through these fetch requests and sometimes regardless the application creates, updates or removes our JS objects in the DOM. This full CRUD functionality without any page refreshes provides our users with a seamless and dynamic experience. 
 
-The `fetch()` method is a complicated subject to explain. The simplest `fetch()` request takes one argument, the URL path to the resource desired.
+The `fetch()` method is a complicated subject to explain. The simplest `fetch()` request, like the one sent to collect all videos and categories from our index controller action, takes one argument, the URL path to the resource desired.
 ```
 fetch(‘http://localhost3000/videos’)
 .then(response => response.json())
