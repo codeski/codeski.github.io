@@ -27,9 +27,9 @@ fetch(‘http://localhost3000/videos’)
 .then(response => response.json())
 .then(data => (do something with JSON data))
 ```
-The `fetch()` is an asynchronous function that returns something called a promise object. The promise can be pending but will ultimately be resolved or rejected. We attach callbacks to the promise object with a `.then()`. A `.then()` waits for the promise to be resolved or rejected and will return another promise object that will be the value of the callback, so they can be chained. 
+The `fetch()` is an asynchronous function that returns something called a promise object. The promise can be pending but will ultimately be resolved or rejected. We attach callbacks to the promise object with a `.then()`. A `.then()` waits for the promise to be resolved or rejected and will return another promise object that will be the return value of the callback, so they can be chained. 
 
-In our example, the `fetch()` promise object is a  HTTP response object. We `.then()` take that HTTP response object and parse the response into JSON by using the `.json()` method. We `.then()` take the JSON object (data) and use it to make JS objects. 
+In our example, the `fetch()` promise object is a  HTTP response object, which is JSON. We `.then()` take that response object and parse the response as JSON by using the `.json()` method. We `.then()` take that JS object (data) and use it to make JS Video and Category objects. 
 
 While I didn’t, one could use a `.catch()` at the very end. A `.catch()`  deals with rejected promises objects only and could be used to display an error message. 
 
