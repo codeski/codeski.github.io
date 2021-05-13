@@ -33,5 +33,3 @@ In our example, the `fetch()` promise object is a  HTTP response object, which i
 
 While I didn’t, one could use a `.catch()` at the very end. A `.catch()`  deals with rejected promises objects only and could be used to display an error message. 
 
-It’s cool to know that I’ve hardly scratched the surface of functionality that can be created with JS. It’s simply up to one's imagination for what they want to create. 
-
