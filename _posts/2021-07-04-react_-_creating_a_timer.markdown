@@ -7,7 +7,7 @@ permalink:  react_-_creating_a_timer
 
 
 This will be a basic guide, a crash course for the basic timer in React. 
-Must use a class Component and component lifecycle methods.
+Timer can only be used inside of class Components and require the use of component lifecycle methods: `componentDidMount()` &   `componentWillUnmount()`.
 
 ## Component lifecycle methods and phases 
 ### There are 3 phases to any component: Mounting, Updating, and Unmounting
