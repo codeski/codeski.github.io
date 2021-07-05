@@ -1,7 +1,7 @@
 ---
 layout: post
 title:      "React - creating a timer"
-date:       2021-07-05 00:07:14 +0000
+date:       2021-07-04 20:07:14 -0400
 permalink:  react_-_creating_a_timer
 ---
 
@@ -11,12 +11,14 @@ Must use a class Component and component lifecycle methods.
 
 ## Component lifecycle methods and phases 
 * There are 3 phases to any component: Mounting, Updating, and Unmounting
-* Lifecycle methods are invoked, do not use arrow functions
+
 * This guide will cover the lifecycle methods in making timers: 
 * * constructor() - mounting
 * * render() - mounting and updating
 * * componentDidMount() - mounting
 * * componentWillUnmount() - unmounting
+
+* * * Lifecycle methods are invoked, do not use arrow functions
 
 I recommend copying and pasting this code into your editor: everything is in order and walks through the basics of a timer. Just render the component in your App `<Timer />`
 
@@ -87,4 +89,4 @@ class Timer extends React.Component {
 export default Timer
 ```
 
-Remove the commented out part to invoke makeTimer() in componentDidMount() and watch how it changes the UI experience without a double render effect.
+Remove the commented out part to invoke `this.makeTimer()` in `componentDidMount()` and watch how it changes the UI experience. Upon initial render you can see that `componentDidMout()` was called. Before you saw the `render()` a new state had been set.
