@@ -53,7 +53,7 @@ class Timer extends React.Component {
        )
    }
   
-   // 4) Mounting
+   // 3) Mounting
    componentDidMount(){
        // access to this. & .setState
        // good for using fetch
@@ -66,7 +66,7 @@ class Timer extends React.Component {
  
   
  
-   // 5) Mounting and/or Updating
+   // 4) Mounting and/or Updating
    // arrow function
    makeTimer = () => {
        this.setState(prevState => ({timer: prevState.timer += 1})) //adds 1
