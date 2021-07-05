@@ -10,17 +10,17 @@ This will be a basic guide, a crash course for the basic timer in React.
 Must use a class Component and component lifecycle methods.
 
 ## Component lifecycle methods and phases 
-* There are 3 phases to any component: Mounting, Updating, and Unmounting
+#### There are 3 phases to any component: Mounting, Updating, and Unmounting
 
-* This guide will cover the lifecycle methods in making timers: 
-* * `constructor()` - mounting
-* * `render()` - mounting and updating
-* * `componentDidMount()` - mounting
-* * `componentWillUnmount()` - unmounting
+#### This guide will cover the lifecycle methods in making timers: 
+*  `constructor()` - mounting
+* `render()` - mounting and updating
+* `componentDidMount()` - mounting
+* `componentWillUnmount()` - unmounting
 
-* * * Lifecycle methods are invoked, do not use arrow functions
+#### Lifecycle methods are invoked, do not use arrow functions
 
-I recommend copying and pasting this code into your editor: everything is in order and walks through the basics of a timer. Just render the component in your App `<Timer />`
+I recommend copying and pasting this code into your editor: everything is in order and walks through the basics of a timer a component lifecycles it uses.  Just render the component in your App `<Timer />`
 
 ```
 import React from 'react'
