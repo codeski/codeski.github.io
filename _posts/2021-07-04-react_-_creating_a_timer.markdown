@@ -30,14 +30,14 @@ class Timer extends React.Component {
    // constructor(props) {
    //     super(props) 
  
-   //     //how to set state through constructor
+   //     //how to set local state through constructor
    //     this.state = {
    //         timer: 0
    //     }
    // }
  
    // ES6 syntax - constructors are automatic for props
-   // 1) Mounting - if you want to set a local state
+   // 1) Mounting - timer needs a local state
    state = {
            timer: 0
    }
