@@ -13,10 +13,10 @@ Must use a class Component and component lifecycle methods.
 ### There are 3 phases to any component: Mounting, Updating, and Unmounting
 
 ### This guide will cover the lifecycle methods in making timers: 
-*  `constructor()` - mounting
+*  `constructor()` - mounting - assigns props - happens automatically - does not need to be included in code
 * `render()` - mounting and updating
-* `componentDidMount()` - mounting
-* `componentWillUnmount()` - unmounting
+* `componentDidMount()` - mounting - starting your timer
+* `componentWillUnmount()` - unmounting - ending your timer
 
 ### Lifecycle methods are invoked, do not use arrow functions
 
@@ -28,7 +28,7 @@ import React from 'react'
 class Timer extends React.Component {
    // 1) - Mounting
    // constructor(props) {
-   //     super(props) -- automatic
+   //     super(props) 
  
    //     //how to set state through constructor
    //     this.state = {
