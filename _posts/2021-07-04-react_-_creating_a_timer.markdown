@@ -13,7 +13,7 @@ Timer can only be used inside of class Components and require the use of compone
 ### There are 3 phases to any component: Mounting, Updating, and Unmounting
 
 ### This guide will cover the lifecycle methods in making timers: 
-*  `constructor()` - mounting - assigns props - happens automatically - does not need to be included in code
+*  `constructor()` - mounting - assigns props  - happens automatically, does not need to be included in code
 * `render()` - mounting and updating
 * `componentDidMount()` - mounting - starting your timer
 * `componentWillUnmount()` - unmounting - ending your timer
@@ -28,7 +28,7 @@ import React from 'react'
 class Timer extends React.Component {
    // 1) - Mounting
    // constructor(props) {
-   //     super(props) 
+   //     super(props)  
  
    //     //how to set local state through constructor
    //     this.state = {
@@ -36,7 +36,7 @@ class Timer extends React.Component {
    //     }
    // }
  
-   // ES6 syntax - constructors are automatic for props
+   // ES6 syntax 
    // 1) Mounting - timer needs a local state
    state = {
            timer: 0
@@ -57,7 +57,7 @@ class Timer extends React.Component {
    componentDidMount(){
        // access to this. & .setState
        // good for using fetch
-       // this.makeTimer() // if invoked before the user receives the UI
+       // this.makeTimer() // if invoked will update before user receives the UI
            // user would see a '1'
        this.interval =  setInterval(this.makeTimer, 1000)
        // UI starts at '0' 
