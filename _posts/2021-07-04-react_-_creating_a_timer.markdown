@@ -13,10 +13,10 @@ Must use a class Component and component lifecycle methods.
 * There are 3 phases to any component: Mounting, Updating, and Unmounting
 
 * This guide will cover the lifecycle methods in making timers: 
-* * constructor() - mounting
-* * render() - mounting and updating
-* * componentDidMount() - mounting
-* * componentWillUnmount() - unmounting
+* * `constructor()` - mounting
+* * `render()` - mounting and updating
+* * `componentDidMount()` - mounting
+* * `componentWillUnmount()` - unmounting
 
 * * * Lifecycle methods are invoked, do not use arrow functions
 
